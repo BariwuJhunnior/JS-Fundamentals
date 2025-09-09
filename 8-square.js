@@ -1,15 +1,18 @@
 const first_Arg = process.argv[2];
 const num = parseInt(first_Arg);
 
-if(!isNaN(num)) {
+if (!isNaN(num)) {
   let row = '';
-
-  for(let i = 0; i < num; i++) {
-    row += "X";
+  let i = 0;
+  while (i < num) {
+    row += 'X';
+    i++;
   }
-  for(let j = 0; j < num; j++){
+  let j = 0;
+  while (j < num) {
     console.log(row);
+    j++;
   }
-}else{
-  console.log("Missing size");
+} else {
+  console.log('Missing size');
 }
